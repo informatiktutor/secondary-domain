@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "sync": "browser-sync start --server docs --files '**/*' docs --no-notify",
+    "dev": "postcss --use tailwindcss --output docs/main.css css/main.css",
+    "watch:dev": "nodemon --cwd . -x npm run dev -w tailwind.config.js -w css/main.css -w docs/index.html",
+    "watch": "run-p watch:dev sync",
+    "build": "postcss -i css/main.css --output docs/main.css css/main.css --minify"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "browser-sync": "^3.0.2",
+    "cssnano": "^7.0.1",
+    "nodemon": "^3.1.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.3"
+  }
+}

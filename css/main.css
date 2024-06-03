@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nunito-normal {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bg-grain {
+  background-image: url("/backgrounds/grain.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .bg-grain {
+    background-image: none;
+  }
+}
+
+body {
+  height: 100vh;
+}
